@@ -1,0 +1,84 @@
+<div class="main-container">
+    <div class="child-box">
+      <div class="inside-container">
+        <div class="grid-content">  
+        <div class="register">Register</div>
+        <form [formGroup]="userForm" >          
+<!--Name / LastName-->
+        <div>
+            <div class="grid">
+                <label>Name</label>
+                <label>Last Name</label>
+            </div>
+            <div class="mini-container"> 
+                <div>
+                    <input class="input-form" formControlName="name" type="text">
+                </div>
+                <div>
+                    <input class="input-form" formControlName="lastName" type="text">
+                </div>  
+            </div>
+        </div>
+<!--UserName / Email-->
+        <div>
+            <div class="grid">
+                <label>UserName</label>
+                <label>Email</label>
+            </div>
+            <div class="mini-container">
+                <div>
+                    <input class="input-form" formControlName="userName" type="text">
+                </div>
+                <div>
+                    <input class="input-form" formControlName="email" type="email">
+                </div> 
+            </div>
+        </div>
+<!--dateBirth / Phone-->
+        <div>
+            <div class="grid">
+                <label>Date of Birth</label>
+                <label>Phone</label>
+            </div>
+            <div class="mini-container">              
+                <div>
+                    <input class="input-form" type="date" formControlName="dateOfBirth"/>
+                </div>                          
+                <div>
+                    <input class="input-form" formControlName="phone" type="number">
+                </div>
+                
+            </div>
+        </div>
+<!--Password-->
+        <div >
+            <div class="forgotten">
+                <label >Password</label>
+            </div>
+            <input class="full-input-form" formControlName="password" type="password">
+        </div>
+<!--Repeat Password-->
+        <div >
+            <div class="forgotten">
+                <label >Repeat Password</label>
+            </div>
+            <input class="full-input-form" formControlName="password" type="password">
+        </div>
+
+<!--Submit-->
+        <div class="parent-button">
+            <button class="icon-button" (click)="submit()">
+                <span>SUBMIT</span>
+                <img src="../../../assets/images/icon.svg">
+            </button>
+        </div>
+<!--Sign in-->
+       </form> 
+            <div class="register-child">
+                <p class="activ">Already have an account ?</p>
+                <a class="color" routerLink="/"> Sign in</a>
+            </div> 
+        </div>     
+      </div>
+    </div>
+</div>

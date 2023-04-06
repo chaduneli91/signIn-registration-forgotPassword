@@ -1,0 +1,38 @@
+<div class="main-container">
+    <div class="child-box">
+      <div class="inside-container">
+        <div class="grid-content">
+        <div class="signIn">Sign in</div>
+        <form [formGroup]="userForm" >  
+            <div>
+                <label class="d-block" >Email</label>
+                 <input class="input-form" formControlName="email" type="text" >
+            </div>
+            <div >
+                <div class="forgotten">
+                    <label >Password</label>
+                    <a class="color" routerLink="/forgot-password">Forgot Password?</a>
+                </div>
+                
+                 <input class="input-form" formControlName="password" type="password">
+
+                 <div class="remember-basic">
+                    <input  type="checkbox" name="" id="save">
+                    <label for="save">Remember me</label>
+                </div>    
+            </div>
+            <div class="parent-button">
+                <button class="icon-button" (click)="onSubmit()">
+                    <span>SIGN IN</span>
+                    <img src="../../../assets/images/icon.svg">
+                </button>
+            </div>
+       </form> 
+            <div class="register-child">
+                <p class="activ">Don't have account ?</p>
+                <a class="color" routerLink="/registration"> Register</a>
+            </div>
+        </div>  
+      </div>
+    </div>
+</div>
