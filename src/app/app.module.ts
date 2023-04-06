@@ -20,7 +20,7 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
     ForgotPasswordComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     RegistrationModule,
     SignInModule,
